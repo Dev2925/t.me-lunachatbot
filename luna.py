@@ -16,8 +16,8 @@ else:
 luna = Client(
     ":memory:",
     bot_token=bot_token,
-    api_id=6,
-    api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e",
+    api_id=8,
+    api_hash="AAEwsuU0iATRiW9JRLP0kD1Ihv6QIp7xR_8",
 )
 
 bot_id = int(bot_token.split(":")[0])
@@ -33,7 +33,7 @@ async def lunaQuery(query: str, user_id: int):
     resp = (await arq.luna(query, user_id)).result
     return (
         resp
-        if LANGUAGE == "en"
+        if LANGUAGE == "tamil"
         else (
             await arq.translate(resp, LANGUAGE)
         ).result.translatedText
